@@ -1761,7 +1761,7 @@ test fv3_wrtGauss_nemsio_c768: fv3_ww3.exe {
     TEST_DESCR="Compare c768 FV3-WW3 Gaussian grid nemsio output results with previous trunk version"
     CNTL_NAME="fv3_wrtGauss_nemsio_c768"
 
-    TASKS='1752'
+    TASKS='2002'
     PPN="@[plat%C768_PPN]"
     INPES='16'
     JNPES='16'
@@ -1776,7 +1776,7 @@ test fv3_wrtGauss_nemsio_c768: fv3_ww3.exe {
     FHMAX='06'
     WLCLK='30'
     WRITE_GROUP='3'
-    WRTTASK_PER_GROUP='64'
+    WRTTASK_PER_GROUP='62'
     FDIAG='0,1,2,3,4,5,6,7,8,9,10,11,12'
     OUTPUT_GRID="'gaussian_grid'"
     OUTPUT_FILE="'nemsio'"
@@ -1802,9 +1802,9 @@ test fv3_wrtGauss_nemsio_c768: fv3_ww3.exe {
 
     nems_configure="blocked_atm_wav"
     atm_model='fv3'
-    atm_petlist_bounds="0 1727"
+    atm_petlist_bounds="0 1721"
     wav_model='ww3'
-    wav_petlist_bounds="1728 1751"
+    wav_petlist_bounds="1722 2001"
     coupling_interval_sec=1800.0  # 30min coupling, fv3 time step
 
     # The build variable is the fv3_ww3.exe, which
@@ -1831,6 +1831,7 @@ test fv3_wrtGauss_nemsio_c768: fv3_ww3.exe {
      'nems.configure' <=atparse=   "@[PARMnems]/nems.configure.@[nems_configure].IN"
           'mod_def.*' <=copyfrom=  "@[WW3_input_data]"
       'ww3_multi.inp' <=copyfrom=  "@[WW3_input_data]/@[SYEAR]@[SMONTH]@[SDAY]"
+      'rmp_src*' <=copyfrom=  "@[WW3_input_data]/@[SYEAR]@[SMONTH]@[SDAY]"
     }
 
     # Specify output files:
@@ -1876,7 +1877,9 @@ test fv3_wrtGauss_nemsio_c768: fv3_ww3.exe {
         'RESTART/sfc_data.tile4.nc'             .bitcmp. "@[CNTL]/RESTART/"
         'RESTART/sfc_data.tile5.nc'             .bitcmp. "@[CNTL]/RESTART/"
         'RESTART/sfc_data.tile6.nc'             .bitcmp. "@[CNTL]/RESTART/"
-        'out_grd.glo_30m'                       .bitcmp. "@[CNTL]"
+        'out_grd.glo_10m'                       .bitcmp. "@[CNTL]"
+        'out_grd.aoc_9km'                       .bitcmp. "@[CNTL]"
+        'out_grd.aoc_9km'                       .bitcmp. "@[CNTL]"
       # Executable validation.  This makes an MD5 sum of the fv3.exe
       # for comparison against the MD5 sum made in the build job.
       # This is to ensure the executable did not change during the

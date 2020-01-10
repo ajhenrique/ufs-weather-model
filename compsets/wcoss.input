@@ -206,16 +206,18 @@ platform wcoss_dell_p3 {
     LONG_TEST_QUEUE='&LONGQ;'
     BUILD_QUEUE='&BUILDQ;'
 
-    BASELINE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT/NEMSfv3gfs/trunk-20191127"
-    BASELINE_TEMPLATE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT/NEMSfv3gfs/trunk-20191127"
+#    BASELINE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT/NEMSfv3gfs/trunk-20191127"
+#    BASELINE_TEMPLATE="/gpfs/dell2/emc/modeling/noscrub/emc.nemspara/RT/NEMSfv3gfs/trunk-20191127"
+    BASELINE="/gpfs/dell2/emc/modeling/noscrub/Henrique.Alves/GFSv16/UFS/RT/NEMSfv3gfs/baseline-20200107"
+    BASELINE_TEMPLATE="/gpfs/dell2/emc/modeling/noscrub/Henrique.Alves/GFSv16/UFS/RT/NEMSfv3gfs/baseline-20200107"
 
     default_resources={
         TASKS=156
         WRTTASK_PER_GROUP=12
-        TPN=8
+        TPN=6
         INPES=3
         JNPES=8
-        THRD=1
+        THRD=4
         atm_petlist_bounds="0 155"
         wav_petlist_bounds="156 263"
         CPLTASKS=264

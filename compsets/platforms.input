@@ -25,7 +25,8 @@ platform.defaults={
 
     walltime="@[DEFAULT_TEST_WALLTIME]"
 
-    C768_PPN="@[cores_per_node]"
+#    C768_PPN="@[cores_per_node]"
+    C768_PPN=7
     execution_time_modules=""
 }
 
