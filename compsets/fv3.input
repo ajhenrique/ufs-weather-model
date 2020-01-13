@@ -1766,6 +1766,7 @@ test fv3_wrtGauss_nemsio_c768: fv3_ww3.exe {
 
     TASKS='2002'
     PPN="@[plat%C768_PPN]"
+    THRD="@[plat%C768_THRD]"
     INPES='16'
     JNPES='16'
     NPX='769'
@@ -1891,7 +1892,7 @@ test fv3_wrtGauss_nemsio_c768: fv3_ww3.exe {
     }
 
     spawn execute {
-        {"@[build%target]", ranks="@[TASKS]", ppn="@[PPN]" }
+        {"@[build%target]", ranks="@[TASKS]", threads="@[THRD]", ppn="@[PPN]" }
     }
 }
 
