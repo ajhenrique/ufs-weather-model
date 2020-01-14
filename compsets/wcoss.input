@@ -205,7 +205,7 @@ platform wcoss_dell_p3 {
     C768_PPN=7
     C768_THRD=4
 
-    DEFAULT_TEST_WALLTIME=1800
+    DEFAULT_TEST_WALLTIME=3000
 
     MPI='LSF_IMPI'
     MACHINE_ID='wcoss_dell_p3'
