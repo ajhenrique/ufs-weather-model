@@ -1,23 +1,23 @@
 Run rocotostat...
 Generate report...
-WORKFLOW STARTED AT Mon Jan 13 03:57:35 2020 (+1578887855)
+WORKFLOW STARTED AT Wed Jan 15 01:51:09 2020 (+1579053069)
 Repository information:
 
 
 REPO TOP:
-develop     b7cbde7 [origin/develop] Change WCOSS account from FV3GFS to GFS-DEV (#17)
-Fetch URL: git@github.com:ajhenrique/ufs-weather-model
+gfsv16_wave b6d0ca1 [origin/gfsv16_wave] Updating to latest WW3 develop
+Fetch URL: https://github.com/ajhenrique/ufs-weather-model
  M WW3
  M coupledFV3_WW3.appBuilder.mk
  M log/report-hera.intel-log/build_fv3_ww3.exe.log
  M log/report-hera.intel-log/rtreport.txt
 
 Entering 'FMS'
-(HEAD detached at 46014b4) 46014b4 Merge pull request #8 from DusanJovic-NOAA/GFS-FMS
-Fetch URL: https://github.com/NOAA-EMC/FMS
+(HEAD detached at 708b8d5) 708b8d5 Merge pull request #223 from underwoo/set.release.number
+Fetch URL: https://github.com/NOAA-GFDL/FMS
 
 Entering 'FV3'
-(HEAD detached at 8a56781) 8a56781  Add support for cmake build system (#20)
+(HEAD detached at b1ddd67) b1ddd67 Update EMC dev/emc from NCAR dtc/develop 2019/12/17 (#30)
 Fetch URL: https://github.com/NOAA-EMC/fv3atm
 
 Entering 'NEMS'
@@ -25,19 +25,19 @@ Entering 'NEMS'
 Fetch URL: https://github.com/NOAA-EMC/NEMS
 
 Entering 'WW3'
-GEFS_v12 b1d780b6 [origin/GEFS_v12] Uploading changes to wmesmfmd and updating comp/link options for Dell
+BF_w3setup a0f24ddd [origin/BF_w3setup] Activating omp option in w3_setup and cmplr.env comp/link.tmpl, cleaning up deprecated NCEP R&D machine theia from scripts.
 Fetch URL: https://github.com/NOAA-EMC/WW3
 
 Entering 'stochastic_physics'
-(HEAD detached at 25c3321) 25c3321 Merge pull request #2 from climbfuji/remove_transition_mode
+(HEAD detached at 1745422) 1745422 Merge pull request #6 from noaa-psd/psd/develop
 Fetch URL: https://github.com/noaa-psd/stochastic_physics
 
 
 BUILD fv3_ww3.exe: SUCCEEDED
 
 TEST #1: PASS
-  Test fv3_gfdlmprad starting at Mon Jan 13 04:19:33 UTC 2020 (Compare FV3 GFDL mircrophysics radiation change with WW3 results with previous trunk version)
-  Mon Jan 13 04:19:33 UTC 2020
+  Test fv3_gfdlmprad starting at Wed Jan 15 02:14:44 UTC 2020 (Compare FV3 GFDL mircrophysics radiation change with WW3 results with previous trunk version)
+  Wed Jan 15 02:14:44 UTC 2020
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -82,14 +82,14 @@ TEST #1: PASS
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   out_grd.glo_30m: bit-for-bit identical
   Executable did not change during test suite:
-    File: /scratch1/NCEPDEV/stmp2/Henrique.Alves/scrub/rtgen.216311/exec/fv3_ww3.exe
-    Expected md5sum: 22467b42fa89627059ebddab4463ff88
-    Actual md5sum: 22467b42fa89627059ebddab4463ff88
-  TEST PASSED AT Mon Jan 13 04:23:08 UTC 2020
+    File: /scratch1/NCEPDEV/stmp2/Henrique.Alves/scrub/rtgen.26544/exec/fv3_ww3.exe
+    Expected md5sum: c26501b9aa443e44834cd9c9fc808b65
+    Actual md5sum: c26501b9aa443e44834cd9c9fc808b65
+  TEST PASSED AT Wed Jan 15 02:18:22 UTC 2020
 
 TEST #2: PASS
-  Test fv3_wrtGauss_nemsio_c768 starting at Mon Jan 13 04:22:34 UTC 2020 (Compare c768 FV3-WW3 Gaussian grid nemsio output results with previous trunk version)
-  Mon Jan 13 04:22:34 UTC 2020
+  Test fv3_wrtGauss_nemsio_c768 starting at Wed Jan 15 02:29:59 UTC 2020 (Compare c768 FV3-WW3 Gaussian grid nemsio output results with previous trunk version)
+  Wed Jan 15 02:29:59 UTC 2020
   atmos_4xdaily.tile1.nc: bit-for-bit identical
   atmos_4xdaily.tile2.nc: bit-for-bit identical
   atmos_4xdaily.tile3.nc: bit-for-bit identical
@@ -131,14 +131,14 @@ TEST #2: PASS
   RESTART/sfc_data.tile5.nc: bit-for-bit identical
   RESTART/sfc_data.tile6.nc: bit-for-bit identical
   out_grd.glo_10m: bit-for-bit identical
-  out_grd.aoc_9km: bit-for-bit identical
+  out_grd.ant_9km: bit-for-bit identical
   out_grd.aoc_9km: bit-for-bit identical
   Executable did not change during test suite:
-    File: /scratch1/NCEPDEV/stmp2/Henrique.Alves/scrub/rtgen.216311/exec/fv3_ww3.exe
-    Expected md5sum: 22467b42fa89627059ebddab4463ff88
-    Actual md5sum: 22467b42fa89627059ebddab4463ff88
-  TEST PASSED AT Mon Jan 13 04:49:52 UTC 2020
-WORKFLOW REPORT AT Mon Jan 13 04:51:09 2020 (+1578891069)
+    File: /scratch1/NCEPDEV/stmp2/Henrique.Alves/scrub/rtgen.26544/exec/fv3_ww3.exe
+    Expected md5sum: c26501b9aa443e44834cd9c9fc808b65
+    Actual md5sum: c26501b9aa443e44834cd9c9fc808b65
+  TEST PASSED AT Wed Jan 15 02:57:08 UTC 2020
+WORKFLOW REPORT AT Wed Jan 15 02:59:13 2020 (+1579057153)
 Tests: 0 failed, 2 passed out of 2
 Builds: 0 failed, 1 passed out of 1
 REGRESSION TEST WAS SUCCESSFUL
