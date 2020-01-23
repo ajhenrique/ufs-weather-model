@@ -14,3 +14,6 @@
 	path = stochastic_physics
 	url = https://github.com/noaa-psd/stochastic_physics
 
+[submodule "WW3"]
+	path = WW3
+	url = https://github.com/ajhenrique/WW3
